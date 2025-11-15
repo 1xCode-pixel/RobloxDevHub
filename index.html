@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox Dev Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <img src="assets/group-logo.png" id="intro-logo" alt="Group Logo" />
+    <div id="intro-text">Добро пожаловать в Roblox Dev Hub...</div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+
+      <div class="logo-block">
+        <img src="assets/group-logo.png" class="my-logo" />
+        <img src="assets/roblox-logo.png" class="roblox-logo" />
+        <span class="site-name">Roblox Dev Hub</span>
+      </div>
+
+      <!-- GAMBURGER -->
+      <div id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav" id="nav-menu">
+        <a href="#about">О сайте</a>
+        <a href="#tutorials">Уроки</a>
+        <a href="#assets">Открытые ресурсы</a>
+        <a href="#games">Игры</a>
+        <a href="#community">Сообщество</a>
+        <a href="#admin">Админ</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="site-content">
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Создавай, учись и развивайся в Roblox</h1>
+          <p>Готовые материалы, модели, скрипты и проекты — всё, чтобы ускорить твою разработку и вдохновить на новые идеи.</p>
+          <a href="#assets" class="btn-primary">Перейти к ресурсам</a>
+        </div>
+
+        <div class="hero-card">
+          <h2>Что здесь есть?</h2>
+          <ul>
+            <li>🧱 Модели для Roblox Studio</li>
+            <li>📜 Lua-скрипты</li>
+            <li>🎮 Полные игровые проекты</li>
+            <li>📚 Обучающие уроки</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2>О сайте</h2>
+        <p>
+          Roblox Dev Hub — это место для тех, кто создаёт игры, изучает Roblox Studio или просто хочет развиваться.  
+          Мы собрали открытые ресурсы, уроки, проекты и инструменты, которые помогут тебе работать быстрее и качественнее.
+        </p>
+      </div>
+    </section>
+
+    <!-- TUTORIALS -->
+    <section id="tutorials" class="section section-dark reveal">
+      <div class="container">
+        <h2>Уроки</h2>
+        <p style="margin-bottom:14px;">Материалы и гайды, которые помогут в создании игр, скриптов и систем.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Основы Roblox Studio</h3>
+            <p>Научись управлять инструментами и средой разработки.</p>
+          </div>
+
+          <div class="card">
+            <h3>Lua для Roblox</h3>
+            <p>Освой язык Lua, чтобы создавать игровые механики и системы.</p>
+          </div>
+
+          <div class="card">
+            <h3>Мини-игра за 1 вечер</h3>
+            <p>От карты до логики — создадим рабочую мини-игру.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPEN ASSETS -->
+    <section id="assets" class="section reveal">
+      <div class="container">
+        <h2>Открытые ресурсы</h2>
+        <p style="margin-bottom:14px;">
+          Готовые материалы, которые ты можешь использовать в своих проектах.  
+          Добавляй ресурсы через админ-панель — и они автоматически появятся здесь.
+        </p>
+
+        <div id="resources-wrapper" class="grid">
+          <div id="no-resources" class="card">
+            <h3>Пока пусто</h3>
+            <p>Добавь ресурсы в админке.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section id="games" class="section section-dark reveal">
+      <div class="container">
+        <h2>Игры</h2>
+        <p style="margin-bottom:14px;">Все твои проекты с таймерами обновлений и описаниями.</p>
+
+        <div id="games-wrapper" class="grid">
+          <div id="no-games" class="card">
+            <h3>Нет игр</h3>
+            <p>Добавь игры через админ-панель.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="section reveal">
+      <div class="container">
+        <h2>Сообщество</h2>
+        <p>Discord, YouTube, обновления и многое другое — всё, что объединяет разработчиков.</p>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin" class="section admin-section reveal">
+      <div class="container">
+        <h2>Админ-панель</h2>
+
+        <!-- LOGIN -->
+        <div id="admin-login" class="admin-box">
+          <h3>Войти</h3>
+
+          <input id="login-username" type="text" placeholder="Логин">
+          <input id="login-password" type="password" placeholder="Пароль">
+          <button id="login-btn" class="btn-primary">Продолжить</button>
+          <p id="login-error" class="error-text"></p>
+        </div>
+
+        <!-- PIN -->
+        <div id="admin-pin" class="admin-box" style="display:none;">
+          <h3>Введите PIN</h3>
+          <input id="pin-input" type="password" maxlength="4" placeholder="****" />
+          <button id="pin-btn" class="btn-primary">Войти</button>
+          <p id="pin-error" class="error-text"></p>
+        </div>
+
+        <!-- CONTENT -->
+        <div id="admin-content" class="admin-grid" style="display:none;">
+
+          <!-- GAME PANEL -->
+          <div class="admin-card">
+            <h3>Игры</h3>
+
+            <input id="game-title" type="text" placeholder="Название игры">
+            <input id="game-image-url" type="text" placeholder="Ссылка на аву">
+            <textarea id="game-desc-input" placeholder="Описание"></textarea>
+            <input id="update-time-input" type="datetime-local">
+
+            <button id="add-game-btn" class="btn-primary">Добавить</button>
+
+            <h4>Список игр</h4>
+            <div id="admin-games-list"></div>
+          </div>
+
+          <!-- ASSETS PANEL -->
+          <div class="admin-card">
+            <h3>Ресурсы</h3>
+
+            <input id="res-name" type="text" placeholder="Название ресурса">
+            <textarea id="res-desc" placeholder="Описание"></textarea>
+            <input id="res-url" type="text" placeholder="Ссылка">
+
+            <button id="add-res-btn" class="btn-primary">Добавить ресурс</button>
+
+            <h4>Список ресурсов</h4>
+            <div id="admin-resources-list"></div>
+
+            <button id="logout-btn" class="btn-secondary">Выйти</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="container footer-inner">
+      <img src="assets/group-logo.png" class="footer-logo">
+      <span>© <span id="year"></span> Roblox Dev Hub</span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function runIntro() {
+      const intro = document.getElementById("intro");
+      const text = document.getElementById("intro-text");
+      const logo = document.getElementById("intro-logo");
+
+      setTimeout(() => text.style.opacity = 1, 300);
+      setTimeout(() => logo.style.opacity = 1, 700);
+
+      setTimeout(() => { text.style.opacity = 0; logo.style.opacity = 0; }, 2500);
+      setTimeout(() => intro.style.opacity = 0, 3300);
+      setTimeout(() => intro.remove(), 4200);
+    }
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add("active");
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+
+    function isRealMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+    }
+
+    let games = [];
+    let resources = [];
+
+    function loadStorage() {
+      games = JSON.parse(localStorage.getItem("games") || "[]");
+      resources = JSON.parse(localStorage.getItem("resources") || "[]");
+    }
+
+    function saveGames() {
+      localStorage.setItem("games", JSON.stringify(games));
+    }
+
+    function saveRes() {
+      localStorage.setItem("resources", JSON.stringify(resources));
+    }
+
+    const ADMIN_LOGIN = "owner";
+    const ADMIN_PASS_HASH = "d20ede09a70221c3f8ca8d7b90a9ca2874eb3fd39f1dc24a59946dc95836e4bf";
+    const ADMIN_PIN = "8317";
+
+    async function sha256(str) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+      return [...new Uint8Array(buf)].map(x => x.toString(16).padStart(2, "0")).join("");
+    }
+
+    const loginUsernameInput = document.getElementById("login-username");
+    const loginPasswordInput = document.getElementById("login-password");
+    const loginBtn = document.getElementById("login-btn");
+    const loginErrorEl = document.getElementById("login-error");
+
+    const adminLoginBox = document.getElementById("admin-login");
+    const adminPinBox = document.getElementById("admin-pin");
+    const adminContentBox = document.getElementById("admin-content");
+
+    const pinInput = document.getElementById("pin-input");
+    const pinBtn = document.getElementById("pin-btn");
+    const pinErrorEl = document.getElementById("pin-error");
+
+    const logoutBtn = document.getElementById("logout-btn");
+
+    const gamesWrapper = document.getElementById("games-wrapper");
+    const noGamesCard = document.getElementById("no-games");
+    const adminGamesList = document.getElementById("admin-games-list");
+
+    const resourcesWrapper = document.getElementById("resources-wrapper");
+    const noResourcesCard = document.getElementById("no-resources");
+    const adminResourcesList = document.getElementById("admin-resources-list");
+
+    const gameTitleInput = document.getElementById("game-title");
+    const gameImageUrlInput = document.getElementById("game-image-url");
+    const gameDescInput = document.getElementById("game-desc-input");
+    const updateTimeInput = document.getElementById("update-time-input");
+    const addGameBtn = document.getElementById("add-game-btn");
+
+    const resNameInput = document.getElementById("res-name");
+    const resDescInput = document.getElementById("res-desc");
+    const resUrlInput = document.getElementById("res-url");
+    const addResBtn = document.getElementById("add-res-btn");
+
+    async function handleLogin() {
+      const u = loginUsernameInput.value.trim();
+      const p = loginPasswordInput.value;
+
+      loginErrorEl.textContent = "";
+
+      if (!u || !p) {
+        loginErrorEl.textContent = "Введите логин и пароль";
+        return;
+      }
+
+      if (u !== ADMIN_LOGIN) {
+        loginErrorEl.textContent = "Неверные данные";
+        return;
+      }
+
+      const hash = await sha256(p);
+      if (hash !== ADMIN_PASS_HASH) {
+        loginErrorEl.textContent = "Неверные данные";
+        return;
+      }
+
+      adminLoginBox.style.display = "none";
+      adminPinBox.style.display = "block";
+    }
+
+    function handlePin() {
+      const pin = pinInput.value;
+      pinErrorEl.textContent = "";
+
+      if (pin !== ADMIN_PIN) {
+        pinErrorEl.textContent = "Неверный PIN";
+        return;
+      }
+
+      localStorage.setItem("isLoggedInAdmin", "true");
+      adminPinBox.style.display = "none";
+      adminContentBox.style.display = "grid";
+      renderGamesAdmin();
+      renderResAdmin();
+    }
+
+    function checkLogin() {
+      if (localStorage.getItem("isLoggedInAdmin") === "true") {
+        adminLoginBox.style.display = "none";
+        adminPinBox.style.display = "none";
+        adminContentBox.style.display = "grid";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("isLoggedInAdmin");
+      adminContentBox.style.display = "none";
+      adminPinBox.style.display = "none";
+      adminLoginBox.style.display = "block";
+    }
+
+    function renderGamesPublic() {
+      gamesWrapper.innerHTML = "";
+
+      if (!games.length) {
+        noGamesCard.style.display = "block";
+        gamesWrapper.appendChild(noGamesCard);
+        return;
+      }
+
+      noGamesCard.style.display = "none";
+
+      games.forEach(g => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <h3>${g.title}</h3>
+          <img src="${g.imageUrl || "assets/group-logo.png"}" class="game-preview-img">
+          <p>${g.desc || ""}</p>
+          <p>${g.updateTime ? "Обновление: " + g.updateTime : "Обновление не назначено"}</p>
+        `;
+
+        gamesWrapper.appendChild(card);
+      });
+    }
+
+    function addGame() {
+      const game = {
+        id: Date.now().toString(),
+        title: gameTitleInput.value.trim(),
+        imageUrl: gameImageUrlInput.value.trim(),
+        desc: gameDescInput.value.trim(),
+        updateTime: updateTimeInput.value || null
+      };
+
+      if (!game.title) {
+        alert("Введите название");
+        return;
+      }
+
+      games.push(game);
+      saveGames();
+
+      gameTitleInput.value = "";
+      gameImageUrlInput.value = "";
+      gameDescInput.value = "";
+      updateTimeInput.value = "";
+
+      renderGamesPublic();
+      renderGamesAdmin();
+    }
+
+    function deleteGame(id) {
+      games = games.filter(g => g.id !== id);
+      saveGames();
+      renderGamesPublic();
+      renderGamesAdmin();
+    }
+
+    function cancelUpdate(id) {
+      const g = games.find(x => x.id === id);
+      if (!g) return;
+      g.updateTime = null;
+      saveGames();
+      renderGamesPublic();
+      renderGamesAdmin();
+    }
+
+    function renderGamesAdmin() {
+      adminGamesList.innerHTML = "";
+
+      if (!games.length) {
+        adminGamesList.innerHTML = "<p>Нет игр.</p>";
+        return;
+      }
+
+      games.forEach(g => {
+        const item = document.createElement("div");
+        item.className = "admin-item";
+
+        item.innerHTML = `
+          <div>
+            <b>${g.title}</b>
+            <p>${g.updateTime || "Обновление не назначено"}</p>
+          </div>
+
+          <div class="admin-item-actions">
+            <button class="btn-secondary btn-small" onclick="cancelUpdate('${g.id}')">Отменить</button>
+            <button class="btn-danger btn-small" onclick="deleteGame('${g.id}')">Удалить</button>
+          </div>
+        `;
+
+        adminGamesList.appendChild(item);
+      });
+    }
+
+    function renderResPublic() {
+      resourcesWrapper.innerHTML = "";
+
+      if (!resources.length) {
+        noResourcesCard.style.display = "block";
+        resourcesWrapper.appendChild(noResourcesCard);
+        return;
+      }
+
+      noResourcesCard.style.display = "none";
+
+      const mobile = isRealMobile();
+
+      resources.forEach(r => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <h3>${r.name}</h3>
+          <p>${r.desc}</p>
+          ${
+            mobile
+              ? `<p class="cant-dl">⚠ Нельзя скачать с телефона</p>`
+              : `<a href="${r.url}" class="btn-primary" download>Скачать</a>`
+          }
+        `;
+
+        resourcesWrapper.appendChild(card);
+      });
+    }
+
+    function addRes() {
+      const res = {
+        id: Date.now().toString(),
+        name: resNameInput.value.trim(),
+        desc: resDescInput.value.trim(),
+        url: resUrlInput.value.trim()
+      };
+
+      if (!res.name || !res.url) {
+        alert("Введите название и ссылку");
+        return;
+      }
+
+      resources.push(res);
+      saveRes();
+
+      resNameInput.value = "";
+      resDescInput.value = "";
+      resUrlInput.value = "";
+
+      renderResPublic();
+      renderResAdmin();
+    }
+
+    function deleteRes(id) {
+      resources = resources.filter(r => r.id !== id);
+      saveRes();
+      renderResPublic();
+      renderResAdmin();
+    }
+
+    function renderResAdmin() {
+      adminResourcesList.innerHTML = "";
+
+      if (!resources.length) {
+        adminResourcesList.innerHTML = "<p>Нет ресурсов.</p>";
+        return;
+      }
+
+      resources.forEach(r => {
+        const div = document.createElement("div");
+        div.className = "admin-item";
+
+        div.innerHTML = `
+          <div>
+            <b>${r.name}</b>
+            <p>${r.url}</p>
+          </div>
+          <button class="btn-danger btn-small" onclick="deleteRes('${r.id}')">Удалить</button>
+        `;
+
+        adminResourcesList.appendChild(div);
+      });
+    }
+
+    window.addEventListener("load", () => {
+      runIntro();
+      loadStorage();
+      renderGamesPublic();
+      renderResPublic();
+      checkLogin();
+
+      if (loginBtn) loginBtn.addEventListener("click", handleLogin);
+      if (pinBtn) pinBtn.addEventListener("click", handlePin);
+      if (logoutBtn) logoutBtn.addEventListener("click", logout);
+
+      if (addGameBtn) addGameBtn.addEventListener("click", addGame);
+      if (addResBtn) addResBtn.addEventListener("click", addRes);
+    });
+
+    window.addEventListener("resize", renderResPublic);
+  </script>
+
+</body>
+</html>
